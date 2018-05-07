@@ -6,3 +6,5 @@ config :bitcoin_rpc,
   user: "",
   pass: "",
   callback: nil # {BitcoinWallet, :notify_queue}
+
+import_config "#{Mix.env}.exs"

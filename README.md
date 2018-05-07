@@ -5,7 +5,7 @@ incomming transactions for the wallet.
 
 ## Installation
 
-This package is [available on Hex](https://hex.pm/docs/publish),  and it can be installed 
+This package is [available on Hex](https://hex.pm/packages/bitcoin_rpc), and it can be installed 
 by adding `bitcoin_rpc` to your list of dependencies in `mix.exs`:
 
 ```elixir

@@ -1,12 +1,33 @@
 language: elixir
 
 elixir:
-  - 1.6.0
+  - 1.6
+  - 1.5
 
 otp_release:
   - 20.0
+  - 19.0
+
+cache:
+  directories:
+  - deps
+  - /home/travis/download
+
+before_install:
+  - wget -P /home/travis/download/ -nc https://bitcoin.org/bin/bitcoin-core-0.16.0/bitcoin-0.16.0-x86_64-linux-gnu.tar.gz && tar -xzvf /home/travis/download/bitcoin-0.16.0-x86_64-linux-gnu.tar.gz -C /home/travis
+
+install:
+  - mix local.hex --force
+  - mix local.rebar --force
+  - mix deps.get
+
+before_script:
+  - mkdir -p /home/travis/.bitcoin && cp bitcoin.conf /home/travis/.bitcoin/bitcoin.conf
+  - /home/travis/bitcoin-0.16.0/bin/bitcoind -regtest -daemon
 
 env:
   - MIX_ENV=test
 
-script: mix coveralls.travis
+script:
+  - sleep 15
+  - mix coveralls.travis
