@@ -4,12 +4,14 @@ defmodule BitcoinRpc.MixProject do
   def project do
     [
       app: :bitcoin_rpc,
+      name: "Bitcoin RPC",
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       package: package(),
       description: description(),
       deps: deps(),
+      source_url: "https://github.com/around25/bitcoin_rpc",
       preferred_cli_env: ["coveralls": :test, "coveralls.travis": :test, "coveralls.html": :test],
     ]
   end
@@ -21,9 +23,11 @@ defmodule BitcoinRpc.MixProject do
   end
 
   defp package do
-    [maintainers: ["Cosmin Harangus"],
-     licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/around25/bitcoin_rpc"}]
+    [
+      maintainers: ["Cosmin Harangus"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/around25/bitcoin_rpc"}
+    ]
   end
 
   # Run "mix help compile.app" to learn about applications.
