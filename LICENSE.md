@@ -1,29 +1,3 @@
-# BitcoinRpc
-
-Bitcoin RPC is an Elixir library to make RPC calls to a bitcoin node and listen to 
-incomming transactions for the wallet.
-
-## Installation
-
-This package is [available on Hex](https://hex.pm/docs/publish),  and it can be installed 
-by adding `bitcoin_rpc` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:bitcoin_rpc, "~> 0.1.0"}
-  ]
-end
-```
-
-## Documentation
-The docs can be found at [https://hexdocs.pm/bitcoin_rpc](https://hexdocs.pm/bitcoin_rpc).
-
-## Todos
-* Update calls to use the latest version from this documentation: https://bitcoin-rpc.github.io/
-
-## License
-
 MIT License
 
 Copyright (c) 2018 Around25 SRL
